@@ -1,0 +1,130 @@
+* {
+  font-family: "Comic Sans MS";
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ffdede;
+}
+
+#check-menu {
+  display: none;
+}
+
+.nav {
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 90%;
+  margin-right: 200px;
+  font-size: 30px;
+}
+
+.burger {
+  background: #a1ffc6;
+  height: 72px;
+}
+
+.nav__item {
+  text-decoration: none;
+  text-align: center;
+  padding: 15px 10px;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+}
+
+.nav__item:hover {
+  border-radius: 15px;
+  background: #f7ffa1;
+}
+
+@media all and (max-width: 800px) {
+  .burger {
+    height: 58px;
+  }
+
+  .nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 20px;
+  }
+}
+
+@media all and (max-width: 555px) {
+ .burger {
+   height: 53px;
+ }
+
+ .nav {
+   display: flex;
+   flex-direction: column;
+   transform: translateY(25%);
+   width: 100%;
+   max-height: 0;
+   max-width: 0;
+   font-size: 0;
+   overflow: hidden;
+   transition-duration: .5s;
+ }
+
+ .nav__item {
+   background-color: #a1ffc6;
+   width: 96.5%;
+ }
+
+ .burger__label {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    height: 53px;
+    width: 50px;
+    top: 0;
+  }
+
+  .burger__line {
+    display: inline;
+    position: absolute;
+    left: 10px;
+    width: 30px;
+    height: 4px;
+    background-color: #6f00ff;
+    top: 14px;
+    transition-duration: 0.5s;
+  }
+
+  .line2, .line3 {
+    top: 23px;
+  }
+
+  .line4 {
+    top: 32px;
+  }
+
+  #check-menu:checked ~ .line1 {
+    display: none;
+  }
+
+  #check-menu:checked ~ .line2 {
+    transform: rotate(45deg) scaleY(.5);
+  }
+
+  #check-menu:checked ~ .line3 {
+    transform: rotate(-45deg) scaleY(.5);
+  }
+
+  #check-menu:checked ~ .line4 {
+    display: none;
+  }
+
+  #check-menu:checked ~ .nav {
+    max-height: 500%;
+    max-width: 100%;
+    font-size: 16px;
+  }
+}
