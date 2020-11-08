@@ -108,7 +108,7 @@ body {
     max-width: 0;
     font-size: 0;
     overflow: hidden;
-    transition-duration: .5s;
+    transition-duration: 0.5s;
   }
 
   .nav__item {
@@ -150,11 +150,11 @@ body {
   }
 
   #check-menu:checked ~ .line2 {
-    transform: rotate(45deg) scaleY(.5);
+    transform: rotate(45deg) scaleY(0.5);
   }
 
   #check-menu:checked ~ .line3 {
-    transform: rotate(-45deg) scaleY(.5);
+    transform: rotate(-45deg) scaleY(0.5);
   }
 
   #check-menu:checked ~ .line4 {
